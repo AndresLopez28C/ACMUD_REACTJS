@@ -1,14 +1,14 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+// import reactLogo from './assets/react.svg'
+// import viteLogo from '/vite.svg'
 import './App.css'
 import { BTN } from './BTN'
 import { BTND } from './BTND'
 import { Fruteria } from './Fruteria'
 function App() {
   const [count, setCount] = useState(0)
-  let btnText = "Boton de texto por codigo"
-  const borrar = "delete"
+  let btnText = "crear"
+  const borrar = "delete "
   //Le estamos enviando un texto a 2 botones que son clase 
   return (
     <>

@@ -1,7 +1,8 @@
+import './btn.css'
 export function BTN(props){
     return(
         <>
-        <button>{props.text}</button>
+        <button className={props.name}>{props.text} </button>
         </>
     )
 }

@@ -1,7 +1,9 @@
-export function BTND({text}){
+import './botones.css'
+
+export function BTND({text,name}){
     return(
         <>
-        <button>{text}</button>
+        <button className={name}>{text}</button>
         </>
     )
 }
