@@ -1,6 +1,7 @@
 import './App.css'
 import { Boton } from './componentes/boton'
 import { Boton2 } from './componentes/boton_2'
+import { Tarjeta } from './componentes/tarejtausuario'
 function App() {
   let texto = "Soy un boton de componente \n pero este texto lo heredo por objeto props"
   let texto2= "Soy un boton pero recibo por desestructurado {}  "
@@ -16,6 +17,7 @@ function App() {
       <button> Hola soy un boton generico html! </button>
       <Boton text = {texto}/>
       <Boton2 text = {texto2}/>
+      <Tarjeta {...datosUsario}>{<Boton2 text ="Yo soy un botoncito children de la tarjeta" />}</Tarjeta>
 
     </>
   )
