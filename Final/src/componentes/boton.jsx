@@ -1,7 +1,16 @@
 export function Boton(props){
+      const estilo = {
+        backgroundColor: '#180144',
+        color: 'white',
+        border: 'none',
+        outline: 'none',
+        borderRadius: '.5rem',
+        marginTop: '.625rem',
+        fontWeight: 'bold'
+    };
     return(
         <>
-        <button>{props.text}</button>
+        <button style={estilo} onClick={() => alert("props.text")}>{props.text}</button>
         </>
     )
 
