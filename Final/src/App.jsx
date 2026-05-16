@@ -2,9 +2,13 @@ import './App.css'
 import { Boton } from './componentes/boton'
 import { Boton2 } from './componentes/boton_2'
 import { Tarjeta } from './componentes/tarejtausuario'
-import {useState,useEffect } from 'react'
+import {useState,useEffect, useContext } from 'react'
 import CardInteractiva from './componentes/UseState';
 import { Timer } from './componentes/Timer'
+
+import { TemaProvider } from './componentes/provider.jsx'
+import { Pagina } from './componentes/pagina.jsx' 
+
 function App() {
   let texto = "Soy un boton de componente \n pero este texto lo heredo por objeto props"
   let texto2= "Soy un boton pero recibo por desestructurado {}  "
@@ -28,13 +32,12 @@ function App() {
 
   useEffect(()=>{
     const manejarTecla = (event)=>{
-      setTecla(event.key);
+      setTecla(prev => prev + event.key);
     }
   
     window.addEventListener("keydown" , manejarTecla);
     
     return () => {
-      //Limpiamos la memoria de los efectos para cuando el elemento desaparezca
       window.removeEventListener("keydown" , manejarTecla);
     }
     
@@ -54,8 +57,10 @@ function App() {
       <button  onClick={increment} className='button'>+</button>
       <button  onClick={restar} className='button'>-</button>
 	    <CardInteractiva/>
-      <h2>última tecla oprimida: {tecla}</h2>
+      <h2>Presiona algo con el teclado y UseEffect lo concatenara! : {tecla}</h2>
+      <button onClick={() => setTecla("")}>Limpiar texto de arriba </button>
       <Timer/>
+      <TemaProvider> <Pagina></Pagina></TemaProvider>
       
     </>
   )
