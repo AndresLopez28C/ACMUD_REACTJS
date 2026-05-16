@@ -6,11 +6,11 @@ export function Navbar(){
             {/* Link funciona com un anchor (<a>) pero interno a React, no recarga toda la página */}
             <Link to="/">Inicio </Link>
 
-            <NavLink to="/perfil" className={({isActive})=> isActive ? 'Link-activo' : ''}>
-                Mi perfil
+            <NavLink to="/Error" className={({isActive})=> isActive ? 'Link-activo' : ''}>
+                Error
             </NavLink>
-            <NavLink to="/manga" className={({isActive})=> isActive ? 'Link-activo' : ''}>
-                Mis mangas
+            <NavLink to="/Vieja" className={({isActive})=> isActive ? 'Link-activo' : ''}>
+                  Pagina Vieja
             </NavLink>
         </nav>
     </>)

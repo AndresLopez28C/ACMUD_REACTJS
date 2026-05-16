@@ -1,4 +1,4 @@
-export function Btn({nombre , sitio}){
+export function Botonweb({nombre , sitio}){
     return(<>
         <button className={nombre}>
             {sitio}
